@@ -34,9 +34,9 @@ const productSchema = new mongoose.Schema(
                 }
             }
         ],
-        catogory: { 
+        category: { 
             type: String,
-            required: [true, "Please Enter Product Catogory"],
+            required: [true, "Please Enter Product Category"],
         },
         stock: { 
             type: Number,
@@ -77,4 +77,6 @@ const productSchema = new mongoose.Schema(
 );
 
 
-module.export = mongoose("Product", productSchema);
+const Product = mongoose.model("Product", productSchema);
+module.exports = Product;
+

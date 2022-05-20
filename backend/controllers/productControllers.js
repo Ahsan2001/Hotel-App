@@ -1,6 +1,54 @@
-const getAllProduct = (req, res) =>{
-    res.send( { message: "Running controller FIne" })
+const Product = require("../models/productModal");
+
+
+// Admin create only 
+ const createProduct = (req, res) => {
+    Product.create(req.body, (err, data) => {
+        if (err) {
+            res.send("error", err);
+        } else {
+            res.send(data);
+        }
+    });
+};
+
+
+// Admin Update only 
+const updateProduct = async (req, res) => {
+
+    let product = await Product.findById(req.params.id)
+
+    if(!product) {
+        res.send({message: "product not found"})
+    }
+    product = await Product.findByIdAndUpdate( req.params.id, req.body, { new: true } )
+    res.send(product)
+};
+
+
+// Admin Delete only 
+const deleteProduct = async (req, res) => {
+
+    let product = await Product.findById(req.params.id)
+
+    if(!product) {
+        res.send({message: "product not found"})
+    }
+
+    await Product.deleteOne();
+    res.send({message: "product deleted successfully"})
+
+};
+
+
+
+
+
+
+const getAllProduct = async (req, res) =>{
+    const products = await Product.find();
+    res.send( { products })
 }
 
 
-module.exports = getAllProduct
+module.exports = { getAllProduct,  createProduct , updateProduct ,deleteProduct}
