@@ -1,6 +1,7 @@
 const Product = require("../models/productModal");
 
 
+
 // Admin create only 
  const createProduct = (req, res) => {
     Product.create(req.body, (err, data) => {
@@ -12,9 +13,8 @@ const Product = require("../models/productModal");
     });
 };
 
-
 // Admin Update only 
-const updateProduct = async (req, res) => {
+const updateProduct = async (req, res , next) => {
 
     let product = await Product.findById(req.params.id)
 
@@ -25,9 +25,8 @@ const updateProduct = async (req, res) => {
     res.send(product)
 };
 
-
 // Admin Delete only 
-const deleteProduct = async (req, res) => {
+const deleteProduct = async (req, res ,next ) => {
 
     let product = await Product.findById(req.params.id)
 
@@ -42,13 +41,22 @@ const deleteProduct = async (req, res) => {
 
 
 
-
-
-
 const getAllProduct = async (req, res) =>{
     const products = await Product.find();
     res.send( { products })
 }
 
+const detailProduct = async (req, res ,next ) => {
+    let product = await Product.findById(req.params.id)
+    if(!product) {
+        res.send({message: "product not found"})
+    }
+    res.send( product )
+};
 
-module.exports = { getAllProduct,  createProduct , updateProduct ,deleteProduct}
+
+
+
+
+
+module.exports = { getAllProduct,  createProduct , updateProduct ,deleteProduct ,detailProduct}
