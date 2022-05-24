@@ -1,4 +1,5 @@
 const Product = require("../models/productModal");
+const ApiFeatures = require("../utils/apiFeatures");
 
 
 
@@ -42,7 +43,8 @@ const deleteProduct = async (req, res ,next ) => {
 
 
 const getAllProduct = async (req, res) =>{
-    const products = await Product.find();
+    const apiFeatures = new ApiFeatures (Product.find(),req.query).search()
+    const products = await apiFeatures.query
     res.send( { products })
 }
 
