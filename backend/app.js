@@ -5,10 +5,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+var cors = require('cors');
+app.use(cors());
+
 
 
 const product = require("./routes/productRoute");
+const auth = require("./routes/authRoute");
+
+
+
 app.use("/api/v1", product)
+app.use("/api/v1", auth)
+
 
 
 module.exports = app;

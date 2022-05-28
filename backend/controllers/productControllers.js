@@ -1,4 +1,4 @@
-const Product = require("../models/productModal");
+const Product = require("../models/productModel");
 const ApiFeatures = require("../utils/apiFeatures");
 
 
@@ -30,7 +30,6 @@ const updateProduct = async (req, res , next) => {
 const deleteProduct = async (req, res ,next ) => {
 
     let product = await Product.findById(req.params.id)
-
     if(!product) {
         res.send({message: "product not found"})
     }
@@ -43,7 +42,7 @@ const deleteProduct = async (req, res ,next ) => {
 
 
 const getAllProduct = async (req, res) =>{
-    const apiFeatures = new ApiFeatures (Product.find(),req.query).search()
+    const apiFeatures = new ApiFeatures (Product.find(),req.query).search().filter()
     const products = await apiFeatures.query
     res.send( { products })
 }
