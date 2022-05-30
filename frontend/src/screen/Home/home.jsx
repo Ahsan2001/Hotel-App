@@ -56,7 +56,7 @@ const Home = () => {
                                 <h6>Hotel Name:</h6>
                                 <h6>Per Day Price: <span className={styles.price}> $9000 </span></h6>
                                 <div className={styles.booking_btn}>
-                                <Link to="booking">Room Detail</Link>
+                                <Link to="/Room-Detail">Room Detail</Link>
                                 </div>                        
                             </div>
                       </div>

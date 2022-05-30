@@ -54,3 +54,38 @@
     width: 160px;
     height: 70px;
 }
+
+
+ul.become_vendor_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+        min-width: 144px;
+}
+
+.inner_DropDown{
+    display: none;
+    position: absolute;
+    background: #127adb;
+    z-index: 10;
+
+}
+
+
+
+.inner_DropDown ul.become_vendor_link li{
+    padding: 6px 0;
+}
+
+.navbar_menu_main ul li:hover .inner_DropDown{
+    display: flex;
+}
+
+.inner_DropDown ul.become_vendor_link li a{
+    color: #fff;
+    margin: 0;
+    border-bottom: 0;
+}

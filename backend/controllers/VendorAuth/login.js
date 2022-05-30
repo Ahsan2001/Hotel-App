@@ -1,4 +1,4 @@
-const Register = require("../models/register");
+const Register = require("../../models/userRegisterModel.js");
 const bcrypt = require("bcrypt");
 
 const login = (req, res) => {

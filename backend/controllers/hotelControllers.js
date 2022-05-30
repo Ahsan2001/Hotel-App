@@ -1,10 +1,10 @@
-const Product = require("../models/productModel");
+const Product = require("../models/hotelModel");
 const ApiFeatures = require("../utils/apiFeatures");
 
 
 
 // Admin create only 
- const createProduct = (req, res) => {
+ const createRoom = (req, res) => {
     Product.create(req.body, (err, data) => {
         if (err) {
             res.send("error", err);
@@ -15,7 +15,7 @@ const ApiFeatures = require("../utils/apiFeatures");
 };
 
 // Admin Update only 
-const updateProduct = async (req, res , next) => {
+const updateRoom = async (req, res , next) => {
 
     let product = await Product.findById(req.params.id)
 
@@ -27,7 +27,7 @@ const updateProduct = async (req, res , next) => {
 };
 
 // Admin Delete only 
-const deleteProduct = async (req, res ,next ) => {
+const deleteRoom = async (req, res ,next ) => {
 
     let product = await Product.findById(req.params.id)
     if(!product) {
@@ -41,13 +41,13 @@ const deleteProduct = async (req, res ,next ) => {
 
 
 
-const getAllProduct = async (req, res) =>{
+const getAllRoom = async (req, res) =>{
     const apiFeatures = new ApiFeatures (Product.find(),req.query).search().filter()
     const products = await apiFeatures.query
     res.send( { products })
 }
 
-const detailProduct = async (req, res ,next ) => {
+const detailRoom = async (req, res ,next ) => {
     let product = await Product.findById(req.params.id)
     if(!product) {
         res.send({message: "product not found"})
@@ -60,4 +60,4 @@ const detailProduct = async (req, res ,next ) => {
 
 
 
-module.exports = { getAllProduct,  createProduct , updateProduct ,deleteProduct ,detailProduct}
+module.exports = { getAllRoom,  createRoom , updateRoom ,deleteRoom ,detailRoom}

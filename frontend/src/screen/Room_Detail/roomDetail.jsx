@@ -1,9 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import roomDetail from '../../assets/2.jpeg'
 
 import styles from "./roomDetail.module.css"
 
 const RoomDetail = () => {
+
+    let navigate = useNavigate();
+    const reserveRoom = () => {
+        navigate("/Booking")
+    }
+
+
   return (
     <React.Fragment>
         <section className={ `${styles.roomDetail} container`  }>
@@ -29,7 +37,7 @@ const RoomDetail = () => {
                                 <li>ATM and Currency Exchange</li>
                             </ul>
 
-                            <button>Reserve Room</button>
+                              <button onClick={(e) => { reserveRoom()}}>Reserve Room</button>
 
 
                         </div>

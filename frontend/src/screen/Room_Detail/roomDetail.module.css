@@ -1,0 +1,25 @@
+section.roomDetail{
+    padding: 100px 0;
+}
+
+.innerImage img{
+    width: 100%;
+}
+
+
+.innerDetailRoom h2{
+    color: #000;
+    font-weight: 700;
+}
+
+
+.innerDetailRoom h4{
+    color:rgb(45, 129, 206)
+}
+
+.innerDetailRoom button{
+    background: rgb(45, 129, 206);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+}

@@ -1,7 +1,7 @@
 const express = require("express");
-const login  = require("../controllers/login");
-const signup  = require("../controllers/register");
-const booking  = require("../controllers/booking");
+const login  = require("../controllers/UserAuth/login");
+const signup  = require("../controllers/UserAuth/register");
+const booking  = require("../controllers/bookingControllers");
 
 
 

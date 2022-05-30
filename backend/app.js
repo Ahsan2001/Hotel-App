@@ -10,13 +10,19 @@ app.use(cors());
 
 
 
-const product = require("./routes/productRoute");
-const auth = require("./routes/authRoute");
+const hotelRoute = require("./routes/hotelRoute");
+const UserAuth = require("./routes/userAuthRoute");
+const VendorAuth = require("./routes/vendorAuthRoute");
 
 
 
-app.use("/api/v1", product)
-app.use("/api/v1", auth)
+
+
+app.use("/api/v1", hotelRoute)
+app.use("/api/v1", UserAuth)
+app.use("/api/v1", VendorAuth)
+
+
 
 
 

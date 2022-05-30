@@ -31,7 +31,7 @@ const Booking = () => {
                     setLoading(false)
                     console.log(res)
                     toast.success('bookingData Submmited')
-                    navigate("/Home")
+                    navigate("/Payment")
                 }
             )
             .catch(
@@ -48,18 +48,18 @@ const Booking = () => {
             <section className={ `${styles.auth_account} my-5` }>
                 <div className="container mb-5">
                     <div className="row">
-                        <div className="col-10 m-auto">
+                        <div className="col-8 m-auto">
                             <h1 className={ `${styles.Booking_heading} text-center mt-2  `}>Booking Room</h1>
                             <form className={`row ${styles.bookingFormInner}`}>
 
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     <label htmlFor="name">
                                          Full Name <span className={styles.redBtn}>*</span>
                                     </label>
                                     <input id="name" className="form-control" type="text" value={name} onChange={(e) => { setName(e.target.value) }} />
                                 </div>
 
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     <label htmlFor="email">
                                          Email Address <span className={styles.redBtn}>*</span>
                                     </label>
@@ -67,7 +67,7 @@ const Booking = () => {
                                 </div>
 
 
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     <label htmlFor="cnic">
                                          CNIC Number <span className={styles.redBtn}>*</span>
                                     </label>
@@ -75,7 +75,7 @@ const Booking = () => {
                                 </div>
 
 
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     <label htmlFor="phone">
                                          Phone Number <span className={styles.redBtn}>*</span>
                                     </label>
@@ -83,7 +83,7 @@ const Booking = () => {
                                 </div>
 
 
-                                <div className="col-md-10">
+                                <div className="col-md-12">
                                     <label htmlFor="address">
                                          Address <span className={styles.redBtn}>*</span>
                                     </label>
@@ -92,7 +92,7 @@ const Booking = () => {
 
 
 
-                                <div className="col-md-2 ps-0">
+                                <div className="col-md-12">
                                     <label htmlFor="totalPerson">
                                         Total Person <span className={styles.redBtn}>*</span>
                                     </label>

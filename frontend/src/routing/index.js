@@ -38,9 +38,6 @@ const Routing = () => {
                 <Route path="Payment" element={<Payment  />} />
                 <Route path="Find-Hotel" element={<FindHotel  />} />
                 <Route path="Room-Detail" element={<RoomDetail  />} />
-
-
-               
                 <Route path="*" element={ <NotFound />} />
             </Routes>
         <Footer />

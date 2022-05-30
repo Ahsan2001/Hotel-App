@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const Register = require("../models/register");
+const Register = require("../../models/userRegisterModel.js");
 
 
 const signup = async (req, res) => {
