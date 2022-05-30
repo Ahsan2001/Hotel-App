@@ -20,6 +20,7 @@ import Home from '../screen/Home/home';
 import Booking from '../screen/booking/booking';
 import Payment from '../screen/Payment/payment';
 import FindHotel from '../screen/Find_Hotel/findHotel';
+import RoomDetail from '../screen/Room_Detail/roomDetail';
 
 
   
@@ -33,14 +34,13 @@ const Routing = () => {
                 <Route index element={<Home />} />
                 <Route path="Login" element={<Login />} />
                 <Route path="Signup" element={<Signup />} />
-                <Route path="booking" element={<Booking  />} />
-                <Route path="payment" element={<Payment  />} />
+                <Route path="Booking" element={<Booking  />} />
+                <Route path="Payment" element={<Payment  />} />
                 <Route path="Find-Hotel" element={<FindHotel  />} />
+                <Route path="Room-Detail" element={<RoomDetail  />} />
 
 
-                            {/*   <Route path="portfolio" element={<Portfolio  />} />
-                <Route path="blog" element={<Blog />} />
-                <Route path="contact" element={<Contact />} />  */}
+               
                 <Route path="*" element={ <NotFound />} />
             </Routes>
         <Footer />
