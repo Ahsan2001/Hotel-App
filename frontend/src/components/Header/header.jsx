@@ -1,22 +1,42 @@
 import React from 'react'
 import styles from './header.module.css'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap'
-import { FcHome } from "react-icons/fc";
+import logo from "../../assets/logo.png";
 
 
 const Header = () => {
+
+
+
+
+  let activeStyle = {
+    fontWeight: "400",
+}
+
+
+
+
+
+
+
+
   return (
-    <Navbar className={styles.header_main} expand="lg">
-      <Navbar.Brand href="#home" className={`${styles.navbar_main}  m-0`}> <FcHome />  BMJ Hotel</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className={styles.navbar_menu_main}>
-          <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/Login">Login</Link></li>
-          </ul>
-      </Navbar.Collapse>
-  </Navbar>
+    <div className={styles.Header_main}>
+      <Navbar className={styles.header_body} expand="lg">
+        <Navbar.Brand className={`${styles.navbar_main}  m-0`}> <img src={logo}  /> </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className={styles.navbar_menu_main}>
+            <ul>
+              <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined  }>Home</NavLink></li>
+              <li><NavLink to="/Find-Hotel" style={({ isActive }) => isActive ? activeStyle : undefined  }>Find Hotel</NavLink></li>
+              <li><NavLink to="/Become-A-Vendor" style={({ isActive }) => isActive ? activeStyle : undefined  }>Become a Vender</NavLink></li>
+              <li><NavLink to="/Login" style={({ isActive }) => isActive ? activeStyle : undefined  }>Login </NavLink></li>
+              {/* <li><NavLink to="/Signup" style={({ isActive }) => isActive ? activeStyle : undefined  }>Register</NavLink></li> */}
+            </ul>
+        </Navbar.Collapse>
+    </Navbar>
+  </div>
   )
 }
 

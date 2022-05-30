@@ -1,0 +1,37 @@
+.bookingFormInner label{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.Booking_heading{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+
+.bookingFormInner label span.redBtn{
+    color: red;
+}
+
+.bookingFormInner input{
+    height: 46px;
+}
+
+.booking_btn{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 97.5%;
+    transition: 0.5s;
+    margin: 30px auto;
+    letter-spacing: 2px;
+}
+
+
+.booking_btn:hover{
+    letter-spacing: 3px;
+}

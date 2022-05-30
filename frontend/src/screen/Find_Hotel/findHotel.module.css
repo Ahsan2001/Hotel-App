@@ -1,0 +1,43 @@
+section.FindHotel{
+    background: url(../../assets/find-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-color: #00000069;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+
+
+section.FindHotel .inner_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+
+}
+
+section.FindHotel .inner_content h2{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+
+section.FindHotel .inner_content form{
+    display: flex;
+}
+
+section.FindHotel .inner_content form button{
+    background: rgb(2, 22, 168);
+    border: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+section.FindHotel .inner_content input{
+    height: 47px;
+}

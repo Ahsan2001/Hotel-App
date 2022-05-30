@@ -24,3 +24,27 @@ section.auth_account h1{
 .dont_have a {
     color: rgb(0, 0, 248);
 }
+
+.auth_account  input{
+    height: 46px;
+}
+
+
+
+
+
+
+.booking_btn{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 100%;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+
+.booking_btn:hover{
+    letter-spacing: 3px;
+}

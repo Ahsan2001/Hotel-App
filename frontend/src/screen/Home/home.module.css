@@ -1,0 +1,91 @@
+section.homeBanner{
+    /* background: url(../../assets/hotelBg.jpg); */
+    background: #002244;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    /* background-color: #00000000; */
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+
+
+
+.Home_inner_content{
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.discount{
+    color: rgb(255, 251, 4)
+}
+
+.Home_inner_content h2{text-transform: capitalize;
+
+    font-size: 34px;
+    padding: 10px 0;
+
+}
+
+
+.featuredHotel h1{
+    text-align: center;
+    color: rgb(2, 22, 138);
+    margin: 50px 0 40px;
+}
+
+.findHotelBtn {
+    margin-top: 20px;
+}
+
+.findHotelBtn a{
+    background: rgb(2, 22, 138);
+    color: #fff;
+    padding: 10px 60px;
+    text-decoration: none;
+    border-radius: 2px  ;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+/* card styling  */
+
+.inner_card_main{
+    margin-bottom: 20px ;
+    box-shadow: 0px 0px 6px 1px rgb(202, 202, 202);
+    padding: 5px 5px 15px ;
+}
+
+.inner_card_main img {width: 100%;}
+
+.inner_card_main h6{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+
+.inner_card_main h6 span{
+    color: rgb(2, 22, 138)
+}
+
+
+.booking_btn {
+    margin-top: 13px;
+}
+.inner_card_main  .booking_btn a {
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: rgb(2, 22, 138);
+}

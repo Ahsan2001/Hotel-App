@@ -22,7 +22,7 @@ const Signup = () => {
         setLoading(true)
         e.preventDefault();
         axios
-            .post(`${BASE_URI}/signup`, userData)
+            .post(`${BASE_URI}/VendorSignup`, userData)
             .then(
                 (res) => {
                     setLoading(false)
@@ -46,13 +46,13 @@ const Signup = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-8 m-auto">
-                            <h1 className="text-center my-2">SIGN UP</h1>
+                            <h1 className="text-center my-2">Register Here To Become a Member</h1>
                             <form>
                                 <input className="form-control my-3" type="text" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter name" />
                                 <input className="form-control my-3" type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter email" />
                                 <input className="form-control my-3" type="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} placeholder="phone" />
                                 <input className="form-control my-3" type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} placeholder="password" />
-                                {loading ? <Loader /> : <button className={`btn btn-primary ${styles.btn_main}`} onClick={createAccount}>Register Now</button>}
+                                {loading ? <Loader /> : <button className={`btn btn-primary ${styles.booking_btn}`} onClick={createAccount}>Create Account</button>}
                             </form>
                         </div>
                     </div>

@@ -1,0 +1,43 @@
+button.btn_main{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+section.auth_account{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.auth_account h1{
+    margin: 0px 0 30px !important;
+}
+
+
+
+
+
+
+
+
+.booking_btn{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 100%;
+
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+
+.booking_btn:hover{
+    letter-spacing: 3px;
+}
+
+.auth_account  input{
+    height: 46px;
+}

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const validator = require("validator")
 
 
 const User = new mongoose.Schema(
@@ -13,7 +12,6 @@ const User = new mongoose.Schema(
         email: {
             type: String,
             required: [true, "Please Enter Email Address"],
-            validator: [validator.isEmail, "Please Enter Valid Email Address"],
             unique: true,
         },
 
@@ -24,22 +22,21 @@ const User = new mongoose.Schema(
 
         },
 
-        avatar: {
-            public_id: {
-                type: String,
-                required: true
-            },
-            url: {
-                type: String,
-                required: true
-            }
-        },
-
-        role: {
+        cnic: {            
             type: String,
-            default: "user"
+            required: [true, "Please Enter cnic "],
         },
 
+
+        address: {            
+            type: String,
+            required: [true, "Please Enter address"],
+        },
+
+        noOfPerson: {
+            type: String,
+            required: [true, "Please Enter noOfPerson"],
+        }
      
     }
 );

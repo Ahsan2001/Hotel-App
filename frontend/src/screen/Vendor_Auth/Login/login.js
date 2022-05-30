@@ -18,7 +18,7 @@ const Login = () => {
     const loginUser = (e) => {
         setLoading(true)
         e.preventDefault();
-        axios.post(`${BASE_URI}/login`, userData)
+        axios.post(`${BASE_URI}/VendorLogin`, userData)
             .then((res) => {
                 setLoading(false)
                 console.log(res)
@@ -39,12 +39,12 @@ const Login = () => {
         <section className={styles.auth_account}>
             <div className="container">
                 <div className="row">
-                    <div className="col-6 m-auto">
-                        <h1 className="text-center my-2">LOGIN ACCOUNT</h1>
+                    <div className="col-8 m-auto">
+                        <h1 className="text-center my-2">LOGIN</h1>
                         <form>
-                            <input className="form-control my-3" type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter email" />
-                            <input className="form-control my-3" type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} placeholder="password" />
-                            {loading ? <Loader /> : <button className={`btn btn-primary ${styles.btn_main}`}   onClick={loginUser}>Login</button>}
+                            <input className="form-control my-3" type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter Email" />
+                            <input className="form-control my-3" type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" />
+                            {loading ? <Loader /> : <button className={`btn btn-primary ${styles.booking_btn}`}   onClick={loginUser}>Login</button>}
                         </form>
                         <div className={styles.dont_have}>Dont Have a Account ? <Link to="/Signup">Create Account </Link></div>
                     </div>

@@ -6,14 +6,20 @@ import {
   } from "react-router-dom";
 
 
-  // calling components 
+// Calling Components 
 
 import Header from '../components/Header/header';
 import Footer from '../components/Footer/footer';
-import Login from '../screen/Login/login';
-import Signup from '../screen/Signup/signup';
+
+
+// Calling Screens
+import Login from '../screen/User_Auth/Login/login';
+import Signup from '../screen/User_Auth/Signup/signup';
 import NotFound from '../components/NotFound/notfound';
 import Home from '../screen/Home/home';
+import Booking from '../screen/booking/booking';
+import Payment from '../screen/Payment/payment';
+import FindHotel from '../screen/Find_Hotel/findHotel';
 
 
   
@@ -27,8 +33,12 @@ const Routing = () => {
                 <Route index element={<Home />} />
                 <Route path="Login" element={<Login />} />
                 <Route path="Signup" element={<Signup />} />
-              {/* <Route path="portfolio" element={<Portfolio  />} />
-                <Route path="portfolio" element={<Portfolio  />} />
+                <Route path="booking" element={<Booking  />} />
+                <Route path="payment" element={<Payment  />} />
+                <Route path="Find-Hotel" element={<FindHotel  />} />
+
+
+                            {/*   <Route path="portfolio" element={<Portfolio  />} />
                 <Route path="blog" element={<Blog />} />
                 <Route path="contact" element={<Contact />} />  */}
                 <Route path="*" element={ <NotFound />} />

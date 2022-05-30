@@ -5,7 +5,7 @@ import styles from './footer.module.css'
 const Footer = () => {
   return (
       <div className={styles.footer}>
-          <p>Copyright all rights reserved @2022  || BMJ HOTEL  </p>
+          <p>Copyright all rights reserved @2022  || HOTEL  </p>
       </div>
   )
 }

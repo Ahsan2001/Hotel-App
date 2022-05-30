@@ -1,0 +1,32 @@
+
+.booking_btn{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 100%;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+
+.booking_btn:hover{
+    letter-spacing: 3px;
+}
+
+.payment_main {
+    margin: 100px 0;
+}
+.payment_main input{
+    height: 46px;
+}
+
+
+.paymentHeading{
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.paymentHeading span.confirm{
+    color: rgb(28, 97, 245);
+}
