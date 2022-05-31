@@ -1,11 +1,11 @@
-const Product = require("../models/hotelModel");
+const Hotel = require("../models/hotelModel");
 const ApiFeatures = require("../utils/apiFeatures");
 
 
 
 // Admin create only 
  const createRoom = (req, res) => {
-    Product.create(req.body, (err, data) => {
+     Hotel.create(req.body, (err, data) => {
         if (err) {
             res.send("error", err);
         } else {
@@ -17,42 +17,42 @@ const ApiFeatures = require("../utils/apiFeatures");
 // Admin Update only 
 const updateRoom = async (req, res , next) => {
 
-    let product = await Product.findById(req.params.id)
+    let hotel = await Hotel.findById(req.params.id)
 
-    if(!product) {
-        res.send({message: "product not found"})
+    if (!hotel) {
+        res.send({ message: "hotel not found"})
     }
-    product = await Product.findByIdAndUpdate( req.params.id, req.body, { new: true } )
-    res.send(product)
+    hotel = await Hotel.findByIdAndUpdate( req.params.id, req.body, { new: true } )
+    res.send(hotel)
 };
 
 // Admin Delete only 
 const deleteRoom = async (req, res ,next ) => {
 
-    let product = await Product.findById(req.params.id)
-    if(!product) {
-        res.send({message: "product not found"})
+    let hotel = await Product.findById(req.params.id)
+    if (!hotel) {
+        res.send({ message: "hotel not found"})
     }
 
     await Product.deleteOne();
-    res.send({message: "product deleted successfully"})
+    res.send({ message: "hotel deleted successfully"})
 
 };
 
 
 
 const getAllRoom = async (req, res) =>{
-    const apiFeatures = new ApiFeatures (Product.find(),req.query).search().filter()
-    const products = await apiFeatures.query
-    res.send( { products })
+    const apiFeatures = new ApiFeatures(Hotel.find(),req.query).search().filter()
+    const hotels = await apiFeatures.query
+    res.send({ hotels })
 }
 
 const detailRoom = async (req, res ,next ) => {
-    let product = await Product.findById(req.params.id)
-    if(!product) {
-        res.send({message: "product not found"})
+    let hotel = await Hotel.findById(req.params.id)
+    if(!hotel) {
+        res.send({message: "hotel not found"})
     }
-    res.send( product )
+    res.send( hotel )
 };
 
 

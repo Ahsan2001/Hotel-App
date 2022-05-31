@@ -2,12 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import styles from './signup.module.css'
 import { useNavigate } from "react-router-dom";
-import Loader from "../../components/Loader/loader";
-import BASE_URI from "../../core";
+import Loader from "../../../components/Loader/loader";
+import BASE_URI from "../../../core";
 import { toast } from "react-toastify";
 
 
-const Signup = () => {
+const VendorSignup = () => {
     let navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [name, setName] = useState('');
@@ -62,4 +62,4 @@ const Signup = () => {
     );
 };
 
-export default Signup;
+export default VendorSignup;

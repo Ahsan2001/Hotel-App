@@ -89,3 +89,24 @@ ul.become_vendor_link{
     margin: 0;
     border-bottom: 0;
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .navbar_menu_main ul {
+        flex-direction: column;
+    }
+
+    .navbar_menu_main{
+       justify-content: center;
+    }
+
+
+
+
+
+}

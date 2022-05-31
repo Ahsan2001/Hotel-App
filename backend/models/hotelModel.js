@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
-const productSchema = new mongoose.Schema(
+const hotelSchema = new mongoose.Schema(
     {
         name: { 
             type: String,
-            required: [true, "Please Enter Product Name"],
+            required: [true, "Please Enter Hotel Name"],
             trim: true
         },
         description: { 
             type: String,
-            required: [true, "Please Enter Product Description"],
+            required: [true, "Please Enter Hotel Description"],
             trim: true
         },
         price: { 
             type: Number,
-            required: [true, "Please Enter Product Price"],
+            required: [true, "Please Enter Hotel Price"],
             maxlength: [8, "Price cannot exceeded 8 numbers" ]
         },
         rating: { 
@@ -34,7 +34,7 @@ const productSchema = new mongoose.Schema(
         ],
         category: { 
             type: String,
-            required: [true, "Please Enter Product Category"],
+            required: [true, "Please Enter Hotel Category"],
         },
         createdAT : {
             type: Date,
@@ -44,6 +44,6 @@ const productSchema = new mongoose.Schema(
 );
 
 
-const Product = mongoose.model("Product", productSchema);
-module.exports = Product;
+const Hotel = mongoose.model("Hotel", hotelSchema);
+module.exports = Hotel;
 

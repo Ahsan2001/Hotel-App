@@ -33,10 +33,10 @@ let activeStyle = {
                 <div className={styles.inner_DropDown}>
                   <ul className={styles.become_vendor_link}>
                     <li>
-                      <NavLink to="/">Get Started</NavLink>
+                      <Link to="/VendorSignup">Get Started</Link>
                     </li>
                     <li>
-                      <NavLink to="/">Login Account</NavLink>
+                    <Link to="/VendorLogin">Login Account</Link>
                     </li>
                   </ul>
               </div>

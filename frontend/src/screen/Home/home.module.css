@@ -1,5 +1,7 @@
 section.homeBanner{
-    background: #5757579e;
+    background: url(../../assets/hotelBg.jpg);
+    background-blend-mode: overlay;
+    background-color: rgba(66, 66, 66, 0.464);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -13,14 +15,14 @@ section.homeBanner{
     display: flex;
     justify-content: center;
     z-index: 99;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     align-items: center;
     flex-direction: column;
     height: 80vh;
 }
 
 .discount{
-    color: rgb(45, 129, 206);
+    color: rgb(45 129 206);
     font-weight: 600;
 }
 

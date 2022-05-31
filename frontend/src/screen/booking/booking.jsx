@@ -24,23 +24,24 @@ const Booking = () => {
     const bookingNow = (e) => {
         setLoading(true)
         e.preventDefault();
-        axios
-            .post(`${BASE_URI}/booking`, bookingData)
-            .then(
-                (res) => {
-                    setLoading(false)
-                    console.log(res)
-                    toast.success('bookingData Submmited')
-                    navigate("/Payment")
-                }
-            )
-            .catch(
-                (err) => {
-                    console.log(err)
-                    toast.error('Error Submission')
-                    setLoading(false)
-                }
-            );
+        navigate("/Payment")
+        // axios
+        //     .post(`${BASE_URI}/booking`, bookingData)
+        //     .then(
+        //         (res) => {
+        //             setLoading(false)
+        //             console.log(res)
+        //             toast.success('bookingData Submmited')
+        //             navigate("/Payment")
+        //         }
+        //     )
+        //     .catch(
+        //         (err) => {
+        //             console.log(err)
+        //             toast.error('Error Submission')
+        //             setLoading(false)
+        //         }
+        //     );
     }
 
     return (
