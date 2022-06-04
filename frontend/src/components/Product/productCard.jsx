@@ -19,8 +19,6 @@ const ProductCard = () => {
 
     const GetData = async () => {
 
-   
-
         try {
             await axios.get(`${BASE_URI}/hotel`)
             .then(res => {
@@ -41,21 +39,17 @@ const ProductCard = () => {
   return (
 
     <div className='row'>
-          {productObj.map((product, ind) => {
+        {productObj.map((product, ind) => {
         return <div className='col-md-4' key={ind}>
             <div className={styles.inner_card_main}>
-
-                <h6></h6>
-                <h6>Price $ <span></span> </h6>
-
-                    {console.log(product)}
-
-                <button onClick={() => { navigate(`/Room-Detail/${product.id}`) }}>View Detail</button>
+                <img src={product.images[0].url} />
+                <h6> {product.name}</h6>
+                <h6>Price $ <span> {product.price} </span> </h6>
+                <button onClick={() => { navigate(`Room-Detail/${product._id}`) }}>View Detail</button>
             </div>
         </div>
         })}
     </div>
-
   )
 }
 

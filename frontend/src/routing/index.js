@@ -40,7 +40,7 @@ const Routing = () => {
 
                 <Route path="Payment" element={<Payment  />} />
                 <Route path="Find-Hotel" element={<FindHotel  />} />
-                <Route path="Room-Detail" element={<RoomDetail  />} />
+                <Route path="Room-Detail/:id" element={<RoomDetail  />} />
                 <Route path="*" element={ <NotFound />} />
           
                 <Route path="Login" element={<Login />} />
