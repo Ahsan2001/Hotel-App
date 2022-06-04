@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../../assets/2.jpeg';
 import { Link } from "react-router-dom";
 import styles from './home.module.css';
+import ProductCard from '../../components/Product/productCard';
 
 const Home = () => {
 
@@ -49,29 +49,8 @@ const Home = () => {
                 </div>
 
                 <div className="col-md-9 px-0">
-                  <div className="row">
-                      <div className="col-md-4">
-                            <div className={styles.inner_card_main}>
-                                <img src={img1} alt="hotel-1" />
-                                <h6>Hotel Name:</h6>
-                                <h6>Per Day Price: <span className={styles.price}> $9000 </span></h6>
-                                <div className={styles.booking_btn}>
-                                <Link to="/Room-Detail">Room Detail</Link>
-                                </div>                        
-                            </div>
-                      </div>
-                  </div>
+                      <ProductCard />
                 </div>
-
-
-
-
-
-
-
-
-
-
               </div>
             </div>
 

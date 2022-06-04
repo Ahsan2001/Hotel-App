@@ -35,6 +35,9 @@ const Routing = () => {
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="Booking" element={<Booking  />} />
+
+          {/* <Route path="/bookings" element={<ProtectedRoute><Bookings /></ProtectedRoute>} /> */}
+
                 <Route path="Payment" element={<Payment  />} />
                 <Route path="Find-Hotel" element={<FindHotel  />} />
                 <Route path="Room-Detail" element={<RoomDetail  />} />

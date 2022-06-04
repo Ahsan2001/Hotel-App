@@ -1,0 +1,33 @@
+
+/* card styling  */
+
+.inner_card_main{
+    margin-bottom: 20px ;
+    box-shadow: 0px 0px 6px 1px rgb(202, 202, 202);
+    padding: 5px 5px 15px ;
+}
+
+.inner_card_main img {width: 100%;}
+
+.inner_card_main h6{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+
+.inner_card_main h6 span{
+    color: rgb(45, 129, 206);
+}
+
+
+
+.inner_card_main  button {
+    margin-top: 13px;
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: rgb(45, 129, 206);
+}
