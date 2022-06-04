@@ -15,7 +15,8 @@
 #### .) Backend Connected to Database Done
 #### .) Backend Connected to Frontend Done
 #### .) Get All Model Data in DataBase
-#### .) All Error Done till Now 31-May-2022
+#### .) Dynamic Content from APi 
+#### .) All Error Done till Now 4-june-2022
 
 
 ------------------------------------------------------------------------------
@@ -27,7 +28,6 @@
 ## Remaining Work 
 #### .) REDUX implementation
 #### .) Private Routing
-#### .) Dynamic Content from Admin Panels 
 #### .) Vendor Admin Dashbaord
 #### .) Owner Admin Dashbaord
 #### .) Login with Social through Firebase Authentication 
