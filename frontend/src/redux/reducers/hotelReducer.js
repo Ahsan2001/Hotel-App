@@ -6,15 +6,15 @@ const INITIAL_STATE = {
     userDataError: "",
 };
 
-const getProfileReducer = (state = INITIAL_STATE, action) => {
+const hotelReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case ActionTypes.GET_GITHUB_PROFILE_LOADING:
+        case ActionTypes.GET_HOTEL_REQUEST:
             return {
                 ...state,
                 userDataLoading: true,
             };
 
-        case ActionTypes.GET_GITHUB_PROFILE:
+        case ActionTypes.GET_HOTEL_SUCCESS:
             return {
                 ...state,
                 userData: action.payload,
@@ -22,7 +22,7 @@ const getProfileReducer = (state = INITIAL_STATE, action) => {
                 userDataError: "",
             };
 
-        case ActionTypes.GET_GITHUB_PROFILE_ERROR:
+        case ActionTypes.GET_HOTEL_FAIL:
             return {
                 ...state,
                 userDataLoading: false,
@@ -35,4 +35,4 @@ const getProfileReducer = (state = INITIAL_STATE, action) => {
     }
 };
 
-export { getProfileReducer };
+export { hotelReducer };

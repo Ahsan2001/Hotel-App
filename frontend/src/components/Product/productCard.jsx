@@ -1,37 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios";
+import React, { useContext, useEffect  } from 'react'
 import { useNavigate } from 'react-router-dom'
-import BASE_URI from '../../core';
 import styles from './product.module.css'
+import { MainContext } from '../../contextApi/context';
 
 
-const ProductCard = () => {
+const ProductCard = (  ) => {
 
-    let [productObj, setProductObj] = useState([]);
+    const {productObj, GetData} = useContext(MainContext)
     const navigate = useNavigate();
+    const viewDetail = (product) => {
+        navigate(`Room-Detail/${product._id}`)
+    }
 
 
     useEffect(() => {
         console.log("get data success")
         GetData();
+        // GetDetailData()
     }, [])
 
 
-    const GetData = async () => {
 
-        try {
-            await axios.get(`${BASE_URI}/hotel`)
-            .then(res => {
-                const product = res.data.hotels
-                setProductObj(product)
-            })
-            .catch(err =>{console.log(err)})
-        } 
 
-        catch (error) {
-            console.log("not getting Data  ERROR", error)
-        }
-    }
+
 
 
 
@@ -45,7 +36,9 @@ const ProductCard = () => {
                 <img src={product.images[0].url} />
                 <h6> {product.name}</h6>
                 <h6>Price $ <span> {product.price} </span> </h6>
-                <button onClick={() => { navigate(`Room-Detail/${product._id}`) }}>View Detail</button>
+                <button onClick={() => { 
+                    viewDetail(product)
+                }}>View Detail</button>
             </div>
         </div>
         })}
@@ -54,3 +47,8 @@ const ProductCard = () => {
 }
 
 export default ProductCard
+
+
+
+
+    

@@ -4,6 +4,7 @@ import styles from './payment.module.css'
 import Loader from "../../components/Loader/loader";
 import BASE_URI from "../../core";
 import { toast } from "react-toastify";
+import MetaData from "../../components/MetaData/title";
 
 
 const Payment = () => {
@@ -42,6 +43,7 @@ const Payment = () => {
 
     return (
         <React.Fragment>
+            <MetaData title={"Payment Now "} />
             <section className={styles.payment_main}>
                 <div className="container">
                     <div className="row">

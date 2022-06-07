@@ -23,6 +23,7 @@ import FindHotel from '../screen/Find_Hotel/findHotel';
 import RoomDetail from '../screen/Room_Detail/roomDetail';
 import VendorLogin from '../screen/Vendor_Auth/Login/login';
 import VendorSignup from '../screen/Vendor_Auth/Signup/signup';
+import ProductCard from '../components/Product/productCard';
 
 
   
@@ -40,7 +41,7 @@ const Routing = () => {
 
                 <Route path="Payment" element={<Payment  />} />
                 <Route path="Find-Hotel" element={<FindHotel  />} />
-                <Route path="Room-Detail/:id" element={<RoomDetail  />} />
+                <Route path="Room-Detail/:id" element={<RoomDetail  />  } />
                 <Route path="*" element={ <NotFound />} />
           
                 <Route path="Login" element={<Login />} />
