@@ -6,10 +6,13 @@ import { MainContext } from '../../contextApi/context';
 
 const ProductCard = (  ) => {
 
+
     const {productObj, GetData} = useContext(MainContext)
     const navigate = useNavigate();
+   
+
     const viewDetail = (product) => {
-        navigate(`Room-Detail/${product._id}`)
+        navigate(`Room-Detail/${product._id}`, { state: {   id: product._id  } })
     }
 
 

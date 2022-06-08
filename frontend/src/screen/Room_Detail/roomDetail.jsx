@@ -1,8 +1,6 @@
-import axios from 'axios';
 import React, { useEffect, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import MetaData from '../../components/MetaData/title';
-import BASE_URI from '../../core';
 import styles from "./roomDetail.module.css"
 import { MainContext } from '../../contextApi/context';
 
@@ -10,19 +8,18 @@ import { MainContext } from '../../contextApi/context';
 
 const RoomDetail = ( ) => {
 
-    const { productObj, GetDetailData  } = useContext(MainContext)
-
+    const { productObj, productDetail, GetDetailData } = useContext(MainContext)
+    const location = useLocation();
+    const detail = location.state.id
+   
     const navigate = useNavigate();
+
 
     useEffect(() => {
         console.log("get data success")
-        GetDetailData()
+        GetDetailData(detail , productObj)
+  
     }, [])
-
-
-
-    console.log(productObj[0].data)
-
 
 
 
@@ -42,15 +39,14 @@ const RoomDetail = ( ) => {
                 <div className="row">
                     <div className="col-md-6">
                         <div  className={styles.innerImage}>
-                            {/* <img src={productObj.images[0].url} /> */}
+                            <img src={productDetail.images[0].url} />
                         </div>
                     </div>
 
                     <div className="col-md-6">
                         <div className={styles.innerDetailRoom} >
-                              <h2>{productObj.name}</h2>
-                            {/* <h6>{productObj.description}</h6>
-                            <h2>{value}</h2> */}
+                              <h2>{productDetail.name}</h2>
+                             <h6>{productDetail.description}</h6>
                             <button onClick={(e) => { reserveRoom()}}>Reserve Room</button>
                         </div>
                     </div>

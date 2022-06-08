@@ -1,15 +1,17 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import BASE_URI from '../core';
 
 export const MainContext = React.createContext()
  
 
-
 const Context = ({ children }) => {
+
+ 
+    
+    
     let [productObj, setProductObj] = useState([]);
-
-
+    let [productDetail, setProductDetail] = useState("");
 
 
     const GetData = async () => {
@@ -27,15 +29,14 @@ const Context = ({ children }) => {
         }
     }
 
+    const GetDetailData = async (data, err) => {
 
-
-
-    const GetDetailData = async () => {
         try {
-            await axios.get(`${BASE_URI}/hotel/${productObj[0]._id}`)
+            await axios.get(`${BASE_URI}/hotel/${data}`)
                 .then(res => {
-                 console.log(res)
-                 
+                    const pD = res.data
+                    setProductDetail(pD)
+                    console.log(productDetail)
                 })
                 .catch(err => { console.log(err) })
         }
@@ -47,8 +48,13 @@ const Context = ({ children }) => {
 
 
 
+
+
+
+
+
 return (
-    <MainContext.Provider value={{ productObj, setProductObj, GetData, GetDetailData }}>
+    <MainContext.Provider value={{ productObj, setProductObj, productDetail, setProductDetail,GetData, GetDetailData }}>
         {children}
     </MainContext.Provider>
 )
