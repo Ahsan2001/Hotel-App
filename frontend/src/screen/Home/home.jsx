@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styles from './home.module.css';
 import ProductCard from '../../components/Product/productCard';
+import MetaData from '../../components/MetaData/title';
 
 const Home = () => {
 
@@ -12,6 +13,8 @@ const Home = () => {
   return (
 
     <React.Fragment>
+
+    <MetaData title={"Welcome To SN "} />
 
      <section className={styles.homeBanner}>
         <div className="container">

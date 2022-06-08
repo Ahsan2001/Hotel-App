@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-// import { getProfileReducer } from "./getProfileReducer";
+import { hotelReducer }  from "./hotelReducer";
 
 const rootReducer = combineReducers({
-    // getProfileReducer,
+     hotelReducer
 });
 
 export default rootReducer;

@@ -1,4 +1,5 @@
 import React from 'react';
+import MetaData from '../../components/MetaData/title';
 import styles from './findHotel.module.css';
 
 
@@ -6,6 +7,7 @@ const FindHotel = () => {
   return (
 
     <React.Fragment>
+          <MetaData title={"Find Now  "} />
         <section className={styles.FindHotel}>
             <div className="container">
                 <div className="row">

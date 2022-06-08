@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/loader";
 import BASE_URI from "../../core";
 import { toast } from "react-toastify";
+import MetaData from "../../components/MetaData/title";
 
 
 const Booking = () => {
@@ -46,6 +47,7 @@ const Booking = () => {
 
     return (
         <React.Fragment>
+            <MetaData title={"Booking Now "} />
             <section className={ `${styles.auth_account} my-5` }>
                 <div className="container mb-5">
                     <div className="row">
