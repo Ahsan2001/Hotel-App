@@ -14,19 +14,17 @@ const RoomDetail = ( ) => {
    
     const navigate = useNavigate();
 
-
     useEffect(() => {
         console.log("get data success")
         GetDetailData(detail , productObj)
-  
     }, [])
 
 
-
-
     const reserveRoom = () => {
+        
         navigate("/Booking")
     }
+
 
 
   return (
@@ -39,7 +37,7 @@ const RoomDetail = ( ) => {
                 <div className="row">
                     <div className="col-md-6">
                         <div  className={styles.innerImage}>
-                            <img src={productDetail.images[0].url} />
+                            {/* <img src={productDetail.images[0].url} /> */}
                         </div>
                     </div>
 

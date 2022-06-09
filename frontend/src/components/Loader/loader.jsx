@@ -4,11 +4,10 @@ import styles from './loader.module.css'
 
 const Loader = () => {
   return (
-      <div className={styles.loader_main}>
-        <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-        </Spinner>
-     </div>
+    <div className={styles.loader_main}>
+      <Spinner animation="border" role="status" className={styles.for_height}></Spinner>
+      <span>Please Wait Loading...</span>
+    </div>
   )
 }
 

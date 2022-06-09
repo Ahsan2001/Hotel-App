@@ -1,10 +1,11 @@
 const Register = require("../../models/userRegisterModel");
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const login = (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
-        res.send({ message: "Enter tu karo jani kuch" })
+        res.send({ message: "Input Fields Error" })
     }
     Register.findOne({ email: email }, async (error, user) => {
         if (error) {
@@ -14,16 +15,32 @@ const login = (req, res) => {
             await bcrypt.compare(password, user.password)
                 .then((password) => {
                     if (password) {
-                        res.send({ message: "password sahi hai congratz haha !" })
+
+                        const token = jwt.sign(
+                            {
+                                _id: user._id,
+                            },
+                            "tokenSecret"
+                        );
+                        console.log(token, "token");
+                        res.cookie("token", token, {
+                            httpOnly: true,
+                            // maxAge :
+                        });
+                        res.send({
+                            status: true,
+                            message: "user successfully login", data: user });
                     }
                     else {
-                        res.send({ message: "password sahi nhi hai sed loif ! " })
+                        res.send({ 
+                            status: false,
+                            message: "password sahi nhi hai" })
                     }
                 })
                 .catch((err) => { res.send(err) });
         }
         else {
-            res.send({ message: "jani login credentials sahi dalo na esay kesa hoga login" })
+            res.send({ message: "credentials sahi dalo" })
         }
     })
 }

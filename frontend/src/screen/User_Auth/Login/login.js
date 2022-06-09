@@ -2,14 +2,19 @@ import axios from "axios";
 import React, { useState } from "react";
 import Loader from "../../../components/Loader/loader";
 import styles from './login.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import BASE_URI from "../../../core";
 import { toast } from "react-toastify";
 const Login = () => {
 
+
+    const navigate = useNavigate();
+
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+
     const userData = {
       email, password
     }
@@ -18,16 +23,31 @@ const Login = () => {
     const loginUser = (e) => {
         setLoading(true)
         e.preventDefault();
-        axios.post(`${BASE_URI}/login`, userData)
+        axios.post(`${BASE_URI}/login`, userData, { withCredentials: true })
             .then((res) => {
+                
+                if(res.data.status){
                 setLoading(false)
                 console.log(res)
                 toast.success('SuccessFully Login')
+
+
+                    navigate("/")
+
+
+
+                }
+
+                else{
+                    setLoading(false)
+                    toast.error('Invalid Credential !')
+                }
+
             })
             .catch((err) => { 
                 console.log(err)
                 setLoading(false)
-                toast.error('Invalid Credential !')
+                toast.error('Api Not Hittt Credential !')
             });
         
         setEmail("");

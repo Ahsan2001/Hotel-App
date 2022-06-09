@@ -34,7 +34,7 @@ const Context = ({ children }) => {
         try {
             await axios.get(`${BASE_URI}/hotel/${data}`)
                 .then(res => {
-                    const pD = res.data
+                    const pD =  res.data
                     setProductDetail(pD)
                     console.log(productDetail)
                 })
@@ -46,19 +46,11 @@ const Context = ({ children }) => {
         }
     }
 
-
-
-
-
-
-
-
 return (
     <MainContext.Provider value={{ productObj, setProductObj, productDetail, setProductDetail,GetData, GetDetailData }}>
         {children}
     </MainContext.Provider>
 )
-
 }
 
 

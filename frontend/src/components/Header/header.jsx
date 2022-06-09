@@ -29,7 +29,7 @@ let activeStyle = {
             <ul>
               <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined  }>Home</NavLink></li>
               <li><NavLink to="/Find-Hotel" style={({ isActive }) => isActive ? activeStyle : undefined  }>Find Hotel</NavLink></li>
-              <li><NavLink to="/Become-A-Vendor" style={({ isActive }) => isActive ? activeStyle : undefined  }>Become a Vender</NavLink>
+              {/* <li><NavLink to="/Become-A-Vendor" style={({ isActive }) => isActive ? activeStyle : undefined  }>Become a Vender</NavLink>
                 <div className={styles.inner_DropDown}>
                   <ul className={styles.become_vendor_link}>
                     <li>
@@ -41,7 +41,11 @@ let activeStyle = {
                   </ul>
               </div>
               
-              </li>
+              </li> */}
+
+
+              
+
               <li><NavLink to="/Login" style={({ isActive }) => isActive ? activeStyle : undefined  }>Login </NavLink></li>
               {/* <li><NavLink to="/Signup" style={({ isActive }) => isActive ? activeStyle : undefined  }>Register</NavLink></li> */}
             </ul>
