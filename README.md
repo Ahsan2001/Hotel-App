@@ -18,7 +18,10 @@
 #### .) Backend Connected to Frontend Done
 #### .) Get All Model Data in DataBase
 #### .) Dynamic Content from APi 
-#### .) All Error Done till Now 4-june-2022
+#### .) Search Functionality Done
+#### .) 404 Page Done, Loader Done
+#### .) GEt data through Context Api  
+#### .) All Error Done till Now 10-june-2022
 
 
 ------------------------------------------------------------------------------
@@ -28,7 +31,7 @@
 
 
 ## Remaining Work 
-#### .) REDUX implementation
+#### .) Context Api  will be converted to Redux
 #### .) Private Routing
 #### .) Vendor Admin Dashbaord
 #### .) Owner Admin Dashbaord
