@@ -1,9 +1,0 @@
-export { default as Home } from "./Home/home";
-export { default as FindHotel } from "./Find_Hotel/findHotel";
-export { default as Booking } from "./booking/booking";
-export { default as Payment } from "./Payment/payment";
-export { default as RoomDetail } from "./Room_Detail/roomDetail";
-export { default as Login } from "./User_Auth/Login/login";
-export { default as Signup } from "./User_Auth/Signup/signup";
-export { default as VendorLogin } from "./Vendor_Auth/Login/login";
-export { default as VendorSignup } from "./Vendor_Auth/Signup/signup";

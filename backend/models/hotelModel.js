@@ -16,6 +16,13 @@ const hotelSchema = new mongoose.Schema(
             required: [true, "Please Enter Hotel Price"],
             maxlength: [8, "Price cannot exceeded 8 numbers" ]
         },
+
+        room: {
+            type: Number,
+            required: [true, "Please Enter Rooms"],
+        },
+
+
         rating: { 
             type: Number,
             default: 0

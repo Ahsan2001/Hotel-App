@@ -1,4 +1,4 @@
-const Register = require("../../models/userRegisterModel.js");
+const VendorRegister = require("../../models/vendorRegisterModel");
 const bcrypt = require("bcrypt");
 
 const login = (req, res) => {
@@ -6,7 +6,7 @@ const login = (req, res) => {
     if (!email || !password) {
         res.send({ message: "Enter tu karo jani kuch" })
     }
-    Register.findOne({ email: email }, async (error, user) => {
+    VendorRegister.findOne({ email: email }, async (error, user) => {
         if (error) {
             res.send(error)
         }
@@ -14,10 +14,16 @@ const login = (req, res) => {
             await bcrypt.compare(password, user.password)
                 .then((password) => {
                     if (password) {
-                        res.send({ message: "password sahi hai congratz haha !" })
+                        
+                        res.send({ 
+                            
+                            status: true,
+                            message: "password sahi hai congratz haha !" })
                     }
                     else {
-                        res.send({ message: "password sahi nhi hai sed loif ! " })
+                        res.send({ 
+                            status: false,
+                            message: "password sahi nhi hai sed loif ! " })
                     }
                 })
                 .catch((err) => { res.send(err) });

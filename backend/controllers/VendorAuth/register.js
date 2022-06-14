@@ -1,11 +1,11 @@
 const bcrypt = require("bcrypt");
-const Register = require("../../models/userRegisterModel.js");
+const VendorRegister = require("../../models/vendorRegisterModel");
 
 
 const signup = async (req, res) => {
-    const { name, phone, email, password } = req.body;
+    const { name, phone, email, password, address, cnic } = req.body;
 
-    if (!name || !phone || !email || !password ) {
+    if (!name || !phone || !email || !password || !address || !cnic ) {
         res.send({ message: "please Put All the Fields" })
     }
     const passHashKarhaHoon = await bcrypt.hash(password, 10)
@@ -14,19 +14,19 @@ const signup = async (req, res) => {
         password: passHashKarhaHoon,
 
     };
-    Register.findOne({ email: email }, (error, user) => {
+    VendorRegister.findOne({ email: email }, (error, user) => {
         if (error) {
             res.send(error)
         }
         else if (user) {
             res.send({ message: "email is already registered" })
         } else {
-            Register.create(userObj, (err, _) => {
+            VendorRegister.create(userObj, (err, _) => {
                 if (err) {
                     res.send(err)
                 }
                 else {
-                    res.send({ message: "hogya ja moj kar" })
+                    res.send({ message: "Vendor SuccessFully Created " })
                 }
             })
         }

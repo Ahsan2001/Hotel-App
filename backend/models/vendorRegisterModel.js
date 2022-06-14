@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const register = new mongoose.Schema({
+const vendorRegister = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -15,12 +15,28 @@ const register = new mongoose.Schema({
         maxlength: 11,
         required: true
     },
+
+    address: {
+        type: String,
+        required: true
+    },
+
+    cnic: {
+        type: Number,
+        required: true
+    },
+
+
     password: {
         type: String,
         required: true
     },
+
+
+
+
 })
 
 
-const Register = mongoose.model("userRegister", register)
-module.exports = Register
+const VendorRegister = mongoose.model("vendorRegister", vendorRegister)
+module.exports = VendorRegister
