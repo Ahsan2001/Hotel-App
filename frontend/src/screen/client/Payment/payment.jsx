@@ -50,14 +50,14 @@ const Payment = () => {
                         <div className="col-8 m-auto">
                             <h1 className={` ${styles.paymentHeading}  text-center my-2`}>PAYMENT NOW TO <span className={styles.confirm}>CONFIRM</span> BOOKING</h1>
                             <form>
-                                <input className="form-control my-3" type="text" value={bankName} onChange={(e) => { setBankName(e.target.value) }} placeholder="" />
                              
                              
-                                <select value={bankName} onChange={(e) => { setBankName(e.target.value) }}>            
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                <select className="form-control my-3" value={bankName} onChange={(e) => { setBankName(e.target.value) }}>            
+                                    <option hidden selected>Select Bank For Payment</option>
+                                    <option value="Meezan Bank">Meezan Bank</option>
+                                    <option value="HBL Bank">HBL Bank</option>
+                                    <option value="Standard Chartered Bank">Standard Chartered Bank</option>
+                                    <option value="UBL Bank">UBL Bank</option>
                                 </select>
 
 

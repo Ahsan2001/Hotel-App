@@ -31,28 +31,29 @@ const Routing = () => {
       <BrowserRouter>
         <Routes>
             {/* User Screens  */}
-            <Route element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="Booking" element={<Booking />} />
-            <Route path="Payment" element={<Payment />} />
-            <Route path="Find-Hotel" element={<FindHotel />} />
-            <Route path="Room-Detail/:id" element={<RoomDetail />} />
-            <Route path="Login" element={<Login />} />
-            <Route path="Signup" element={<Signup />} />
-            <Route path="VendorLogin" element={<VendorLogin />} />
-            <Route path="VendorSignup" element={<VendorSignup />} />
-            <Route path="jwdTest" element={<TOKENtesting />} />
+              <Route element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="Booking" element={<Booking />} />
+              <Route path="Payment" element={<Payment />} />
+              <Route path="Find-Hotel" element={<FindHotel />} />
+              <Route path="Room-Detail/:id" element={<RoomDetail />} />
+              <Route path="Login" element={<Login />} />
+              <Route path="Signup" element={<Signup />} />
+              <Route path="VendorLogin" element={<VendorLogin />} />
+              <Route path="VendorSignup" element={<VendorSignup />} />
+              <Route path="jwdTest" element={<TOKENtesting />} />
 
             {/* Vendor Admin Screens */}
-            <Route path="admin/dashboard" element={<Dashboard />} />
-            <Route path="admin/dashboard" element={<Dashboard />} />
-            <Route path="admin/dashboard" element={<Dashboard />} />
-            <Route path="admin/dashboard" element={<Dashboard />} />
-            <Route path="admin/dashboard" element={<Dashboard />} />
-
-
-
-
+              <Route path="admin/dashboard" element={<Dashboard />} />
+              <Route path="admin/create" element={<Create />} />
+              <Route path="admin/edit" element={<Edit />} />
+              <Route path="admin/delete" element={<Delete />} />
+              <Route path="admin/listing" element={<Listing />} />
+            
+            {/* Root Admin Screens */}
+              <Route path="rootAdmin/Panel" element={<Panel />} />
+              <Route path="rootAdmin/ListingVendor" element={<ListingVendor />} />
+              <Route path="rootAdmin/DeleteVendor" element={<DeleteVendor />} />
 
           </Route> 
 

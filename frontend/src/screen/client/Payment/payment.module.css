@@ -20,6 +20,9 @@
 .payment_main input{
     height: 46px;
 }
+.payment_main select{
+    height: 46px;
+}
 
 
 .paymentHeading{
