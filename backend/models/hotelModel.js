@@ -22,11 +22,6 @@ const hotelSchema = new mongoose.Schema(
             required: [true, "Please Enter Rooms"],
         },
 
-
-        rating: { 
-            type: Number,
-            default: 0
-        },
         images: [
             {
                 public_id :{
@@ -39,10 +34,6 @@ const hotelSchema = new mongoose.Schema(
                 }
             }
         ],
-        category: { 
-            type: String,
-            required: [true, "Please Enter Hotel Category"],
-        },
         createdAT : {
             type: Date,
             default: Date.now

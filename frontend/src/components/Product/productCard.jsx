@@ -38,7 +38,7 @@ const ProductCard = (  ) => {
             <div className={styles.inner_card_main}>
                 <img src={product.images[0].url} />
                 <h6> {product.name}</h6>
-                <h6>Per Day Price: $<span>{product.price} </span> </h6>
+                <h6>Per Day Price: Rs <span>{product.price} </span> </h6>
                 <h6>Rooms: <span>{product.room} </span> </h6>
 
                 <button onClick={() => { 
