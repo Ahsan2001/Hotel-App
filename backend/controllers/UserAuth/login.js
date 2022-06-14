@@ -17,15 +17,11 @@ const login = (req, res) => {
                     if (password) {
 
                         const token = jwt.sign(
-                            {
-                                _id: user._id,
-                            },
-                            "tokenSecret"
+                            {  _id: user._id, }, "tokenSecret"
                         );
                         console.log(token, "token");
                         res.cookie("token", token, {
                             httpOnly: true,
-                            // maxAge :
                         });
                         res.send({
                             status: true,

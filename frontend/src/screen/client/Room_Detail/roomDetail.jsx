@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import MetaData from '../../../components/MetaData/title';
 import styles from "./roomDetail.module.css"
 import { MainContext } from '../../../contextApi/context';
+import Button from '@mui/material/Button';
 
 
 
@@ -45,7 +46,7 @@ const RoomDetail = ( ) => {
                         <div className={styles.innerDetailRoom} >
                               <h2>{productDetail.name}</h2>
                              <h6>{productDetail.description}</h6>
-                            <button onClick={(e) => { reserveRoom()}}>Reserve Room</button>
+                              <Button variant="contained"  onClick={(e) => { reserveRoom() }}>Reserve Room</Button>
                         </div>
                     </div>
 

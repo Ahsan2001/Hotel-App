@@ -27,7 +27,7 @@ const VendorLogin = () => {
                     setLoading(false)
                     console.log(res)
                     toast.success('SuccessFully Login')
-                    navigate("/")
+                    navigate("/admin/dashboard")
                 }
 
                 else {

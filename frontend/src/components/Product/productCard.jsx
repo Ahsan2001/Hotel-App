@@ -1,6 +1,7 @@
 import React, { useContext, useEffect  } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './product.module.css'
+import Button from '@mui/material/Button';
 import { MainContext } from '../../contextApi/context';
 
 
@@ -19,15 +20,7 @@ const ProductCard = (  ) => {
     useEffect(() => {
         console.log("get data success")
         GetData();
-        // GetDetailData()
     }, [])
-
-
-
-
-
-
-
 
 
   return (
@@ -40,10 +33,7 @@ const ProductCard = (  ) => {
                 <h6> {product.name}</h6>
                 <h6>Per Day Price: Rs <span>{product.price} </span> </h6>
                 <h6>Rooms: <span>{product.room} </span> </h6>
-
-                <button onClick={() => { 
-                    viewDetail(product)
-                }}>View Detail</button>
+                <Button variant="contained" onClick={() => {viewDetail(product) }}>View Detail</Button>
             </div>
         </div>
         })}

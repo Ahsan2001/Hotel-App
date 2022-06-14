@@ -4,7 +4,9 @@ import Loader from "../../../../components/Loader/loader";
 import styles from './login.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import BASE_URI from "../../../../core";
+import TextField from '@mui/material/TextField';
 import { toast } from "react-toastify";
+import { Box } from '@mui/system';
 const Login = () => {
 
 
@@ -62,8 +64,16 @@ const Login = () => {
                     <div className="col-8 m-auto">
                         <h1 className="text-center my-2">LOGIN</h1>
                         <form>
-                            <input className="form-control my-3" type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="Enter Email" />
-                            <input className="form-control my-3" type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" />
+
+                                <Box sx={{ my: 2 }}>
+                                    <TextField m={2} fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                                </Box>
+
+                                <Box sx={{ my: 2 }}>
+                                    <TextField m={2} fullWidth id="outlined-basic" label="Password" variant="outlined" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                                </Box>
+
+
                             {loading ? <Loader /> : <button className={`btn btn-primary ${styles.booking_btn}`}   onClick={loginUser}>Login</button>}
                         </form>
                         <div className={styles.dont_have}>Dont Have a Account ? <Link to="/Signup">Create Account </Link></div>

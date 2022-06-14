@@ -1,6 +1,6 @@
 [
     {
-        "name" : "Royal Inn HotelOpens in new window",
+        "name" : "Royal Inn Hotel",
         "price" : "5000",
         "room" : 1,
         "description" : "Royal Inn Hotel offers accommodation in conveniently based on the Shahrah-e-Faisal Highway in Karāchi. Guests can enjoy the on-site restaurant.",
@@ -10,7 +10,7 @@
         }]
     },
     {
-        "name" : "Karachi Marriott HotelOpens in new window",
+        "name" : "Karachi Marriott Hotel",
         "price" : "9000",
         "room" : 2,
         "description" : "Located opposite Frere Hall and Park, the 5-star Karachi Marriott Hotel offers modern and luxurious rooms with a flat-screen cable TV. It features 3 dining options, spa and outdoor swimming pool.",
@@ -40,7 +40,7 @@
         }]
     },
     {
-        "name" : "Hotel InnOpens in new window",
+        "name" : "Hotel Inn",
         "price" : "5000",
          "room": 1,
         "description" : "Hotel Inn has a garden and a terrace in Karachi. Among the facilities of this property are a restaurant, a 24-hour front desk and a shared kitchen, along with free WiFi throughout the property.",

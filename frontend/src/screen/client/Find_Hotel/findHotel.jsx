@@ -79,7 +79,7 @@ const FindHotel = () => {
                             <h2>Welcome. userName</h2>
                             <h2>Find an hotel to stay.</h2>
                             <form>
-                                <input onChange={inputHandler} className='form-control' placeholder='Name, City' type="search" name="" id="" />
+                                <input onChange={inputHandler} className='form-control' placeholder='Enter Hotel Name ' type="search" name="" id="" />
                                 <button onClick={getMyHotel}>Search</button>
                             </form>
                         </div> 

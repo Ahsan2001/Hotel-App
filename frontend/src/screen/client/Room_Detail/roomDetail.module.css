@@ -11,7 +11,9 @@ section.roomDetail{
     color: #000;
     font-weight: 700;
 }
-
+.innerDetailRoom h6{
+    padding: 15px 0;
+}
 
 .innerDetailRoom h4{
     color:rgb(45, 129, 206)
@@ -20,6 +22,7 @@ section.roomDetail{
 .innerDetailRoom button{
     background: rgb(45, 129, 206);
     color: #fff;
+    border:  1px solid #7ee6ce;
     border: none;
     padding: 10px 30px;
 }

@@ -26,7 +26,8 @@ section.auth_account h1{
 }
 
 .auth_account  input{
-    height: 46px;
+    width: 100%;
+    display: block;
 }
 
 
@@ -38,7 +39,7 @@ section.auth_account h1{
     background: #000;
     border: none;
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 14px 0;
     width: 100%;
     transition: 0.5s;
     letter-spacing: 2px;

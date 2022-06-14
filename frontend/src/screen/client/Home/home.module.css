@@ -1,5 +1,6 @@
 section.homeBanner{
-    background: url(../../../assets/hotelBg.jpg);
+    /* background: url(../../../assets/hotelBg.jpg); */
+    background: linear-gradient(90deg, rgba(41,95,144,0.9444152661064426) 0%, rgba(0,212,255,1) 0%, rgba(126,230,206,1) 100%);
     background-blend-mode: overlay;
     background-color: rgba(66, 66, 66, 0.464);
     background-position: center;
@@ -22,7 +23,7 @@ section.homeBanner{
 }
 
 .discount{
-    color: rgb(45 129 206);
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
@@ -30,13 +31,17 @@ section.homeBanner{
 
     font-size: 34px;
     padding: 10px 0;
+        text-align: center;
 
 }
 
+.featuredHotel{
+    margin-bottom: 100px;
+}
 
 .featuredHotel h1{
     text-align: center;
-    color: rgb(45, 129, 206);
+    color: rgb(0, 0, 0);
     margin: 50px 0 40px;
 }
 
