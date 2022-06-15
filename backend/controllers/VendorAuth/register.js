@@ -1,10 +1,12 @@
 const bcrypt = require("bcrypt");
+const catchAsynError = require("../../middleware/catchAsynError");
 const VendorRegister = require("../../models/vendorRegisterModel");
+const ErrorHandler = require("../../utils/errorHandler");
 
 
+// create Controller 
 const signup = async (req, res) => {
     const { name, phone, email, password, address, cnic } = req.body;
-
     if (!name || !phone || !email || !password || !address || !cnic ) {
         res.send({ message: "please Put All the Fields" })
     }
@@ -27,7 +29,6 @@ const signup = async (req, res) => {
                 }
                 else {
                     res.send({ 
-                        
                         status: true,
                         message: "Vendor SuccessFully Created " })
                 }
@@ -37,4 +38,37 @@ const signup = async (req, res) => {
 }
 
 
-module.exports = signup;
+
+
+
+
+
+
+
+// Admin Delete only
+// const deleteVendor = catchAsynError(async (req, res, next) => {
+//     let deleteThisVendor = await VendorRegister.findById(req.params.id)
+//     if (!deleteThisVendor) {
+//         return next(new ErrorHandler('venodr not Found'))
+//     }
+//     await VendorRegister.deleteOne();
+//     res.send({ message: "venodr deleted successfully" })
+// }
+// )
+
+
+
+const getAllVendor = catchAsynError(async (req, res) => {
+    const getAll = VendorRegister.find()
+    const vendors = await getAll
+    res.send({
+        vendors
+    })
+}
+)
+
+
+
+
+module.exports = { signup, getAllVendor };
+// deleteVendor
