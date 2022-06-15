@@ -26,7 +26,10 @@ const signup = async (req, res) => {
                     res.send(err)
                 }
                 else {
-                    res.send({ message: "Vendor SuccessFully Created " })
+                    res.send({ 
+                        
+                        status: true,
+                        message: "Vendor SuccessFully Created " })
                 }
             })
         }

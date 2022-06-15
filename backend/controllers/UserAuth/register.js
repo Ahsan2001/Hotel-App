@@ -26,7 +26,9 @@ const signup = async (req, res) => {
                     res.send(err)
                 }
                 else {
-                    res.send({ message: "hogya ja moj kar" })
+                    res.send({ 
+                        status: true,
+                        message: "hogya ja moj kar" })
                 }
             })
         }

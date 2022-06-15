@@ -1,0 +1,36 @@
+.innerDashbaord{
+    padding: 50px 0;
+}
+
+h2.BookingHeading{
+    text-align: center;
+    font-style: oblique;
+    color: #2d81ce;
+    font-weight: 600;
+    font-size: 44px;
+    text-decoration: underline;
+}
+
+.innerDashbaord table{
+    border: 1px solid #000;
+    margin: 5% auto 0;
+}
+
+
+.innerDashbaord table thead th{
+  text-align: center;
+  border: 1px solid #000;
+   color: #2d81ce;
+   padding:  0 10px;
+   text-transform: uppercase;
+
+}
+
+
+.innerDashbaord table tr td{
+    border: 1px solid #000;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+
+}

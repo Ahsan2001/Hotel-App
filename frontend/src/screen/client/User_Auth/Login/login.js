@@ -11,16 +11,13 @@ const Login = () => {
 
 
     const navigate = useNavigate();
-
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
     const userData = {
       email, password
     }
-
 
     const loginUser = (e) => {
         setLoading(true)
@@ -32,12 +29,7 @@ const Login = () => {
                 setLoading(false)
                 console.log(res)
                 toast.success('SuccessFully Login')
-
-
                     navigate("/")
-
-
-
                 }
 
                 else{
@@ -64,16 +56,13 @@ const Login = () => {
                     <div className="col-8 m-auto">
                         <h1 className="text-center my-2">LOGIN</h1>
                         <form>
+                            <Box sx={{ my: 2 }}>
+                                <TextField m={2} fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                            </Box>
 
-                                <Box sx={{ my: 2 }}>
-                                    <TextField m={2} fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                                </Box>
-
-                                <Box sx={{ my: 2 }}>
-                                    <TextField m={2} fullWidth id="outlined-basic" label="Password" variant="outlined" value={password} onChange={(e) => { setPassword(e.target.value) }} />
-                                </Box>
-
-
+                            <Box sx={{ my: 2 }}>
+                                <TextField m={2} fullWidth id="outlined-basic" label="Password" variant="outlined" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                            </Box>
                             {loading ? <Loader /> : <button className={`btn btn-primary ${styles.booking_btn}`}   onClick={loginUser}>Login</button>}
                         </form>
                         <div className={styles.dont_have}>Dont Have a Account ? <Link to="/Signup">Create Account </Link></div>

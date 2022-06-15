@@ -25,24 +25,30 @@ const Booking = () => {
     const bookingNow = (e) => {
         setLoading(true)
         e.preventDefault();
-        navigate("/Payment")
-        // axios
-        //     .post(`${BASE_URI}/booking`, bookingData)
-        //     .then(
-        //         (res) => {
-        //             setLoading(false)
-        //             console.log(res)
-        //             toast.success('bookingData Submmited')
-        //             navigate("/Payment")
-        //         }
-        //     )
-        //     .catch(
-        //         (err) => {
-        //             console.log(err)
-        //             toast.error('Error Submission')
-        //             setLoading(false)
-        //         }
-        //     );
+        axios
+            .post(`${BASE_URI}/booking`, bookingData)
+            .then( (res) => {
+                if (res.data.status) {
+                    setLoading(false)
+                    console.log(res)
+                    toast.success('bookingData Submmited')
+                    navigate("/Payment")
+                }
+
+                else{
+
+                    setLoading(false)
+                    toast.error('Please Enter All the Fields')
+                }
+             }
+            )
+            .catch(
+                (err) => {
+                    console.log(err)
+                    toast.error('Error Submission')
+                    setLoading(false)
+                }
+            );
     }
 
     return (

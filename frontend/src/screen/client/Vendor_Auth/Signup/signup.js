@@ -26,13 +26,18 @@ const VendorSignup = () => {
         e.preventDefault();
         axios
             .post(`${BASE_URI}/VendorSignup`, userData)
-            .then(
-                (res) => {
+            .then( (res) => {
+                if (res.data.status) {
                     setLoading(false)
                     console.log(res)
                     toast.success('SuccessFully Account Created')
-                    navigate("/login")
+                    navigate("/VendorLogin")
                 }
+                else {
+                    setLoading(false)
+                    toast.error('Invalid Credential !')
+                }
+              }
             )
             .catch(
                 (err) => {

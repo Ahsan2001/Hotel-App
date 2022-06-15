@@ -5,7 +5,7 @@ import BASE_URI from "../core";
 const TOKENtesting = () => {
     const createProduct = () => {
         axios
-            .get(`${BASE_URI}/product`)
+            .post(`${BASE_URI}/product`, {}, { withCredentials: true })
             .then((res) => {
                 console.log(res);
             })

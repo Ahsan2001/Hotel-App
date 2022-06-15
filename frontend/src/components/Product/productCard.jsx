@@ -13,7 +13,8 @@ const ProductCard = (  ) => {
    
 
     const viewDetail = (product) => {
-        navigate(`Room-Detail/${product._id}`, { state: {   id: product._id  } })
+        navigate(`Room-Detail/${product._id}`,
+         { state: {   id: product._id  } })
     }
 
 

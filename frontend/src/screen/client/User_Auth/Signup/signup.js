@@ -25,12 +25,19 @@ const Signup = () => {
             .post(`${BASE_URI}/signup`, userData)
             .then(
                 (res) => {
+                    if (res.data.status) {
                     setLoading(false)
                     console.log(res)
                     toast.success('SuccessFully Account Created')
                     navigate("/login")
                 }
-            )
+
+                else{
+                        toast.error('please fill the form correctly')
+                        setLoading(false)
+                }
+            
+                })
             .catch(
                 (err) => {
                     console.log(err)

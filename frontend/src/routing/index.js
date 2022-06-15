@@ -11,7 +11,7 @@ import  {
 import { Login, Signup, Home, Booking, Payment, FindHotel, RoomDetail, VendorLogin, VendorSignup } from '../screen/client/index';
 
 // Sub Admin || Vendor Admin Screens
-import { Dashboard, Create, Listing, Delete, Edit } from '../screen/sub-admin/index';
+import { Dashboard, Create, Delete, Edit } from '../screen/sub-admin/index';
 
 // Root Admin Screens
 import { Panel, ListingVendor, DeleteVendor  } from '../screen/admin/index';
@@ -48,7 +48,6 @@ const Routing = () => {
               <Route path="admin/create" element={<Create />} />
               <Route path="admin/edit" element={<Edit />} />
               <Route path="admin/delete" element={<Delete />} />
-              <Route path="admin/listing" element={<Listing />} />
             
             {/* Root Admin Screens */}
               <Route path="rootAdmin/Panel" element={<Panel />} />

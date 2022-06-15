@@ -14,17 +14,14 @@ const User = new mongoose.Schema(
             required: [true, "Please Enter Email Address"],
             unique: true,
         },
-
-        password: {
-            type: String,
-            required: [true, "Please Enter password"],
-            select: false,
-
-        },
-
         cnic: {            
             type: String,
             required: [true, "Please Enter cnic "],
+        },
+
+        phone: {
+            type: Number,
+            required: [true, "Please Enter phone Number "],
         },
 
 
@@ -32,15 +29,13 @@ const User = new mongoose.Schema(
             type: String,
             required: [true, "Please Enter address"],
         },
-
         noOfPerson: {
             type: String,
             required: [true, "Please Enter noOfPerson"],
         }
-     
     }
 );
 
 
-const UserModel = mongoose.model("User", User);
+const UserModel = mongoose.model("BookingForm", User);
 module.exports = UserModel;

@@ -1,8 +1,17 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
+import Drawer from '../../../components/Drawer/drawer'
 
 const Delete = () => {
   return (
-    <div>Delete</div>
+    <Container fluid>
+      <Row>
+        <Drawer />
+        <Col xs={10}>
+          Delete  Here
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
