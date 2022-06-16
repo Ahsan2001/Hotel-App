@@ -23,6 +23,7 @@
 #### .) GEt data through Context Api  
 #### .) Get Images From Cloudnairy Db Done 
 #### .) Material UI dONE 
+#### .) Vendor Admin Dashbaord Done
 #### .) All Error Done till Now 16-june-2022
 
 
@@ -35,6 +36,5 @@
 ## Remaining Work 
 #### .) Context Api  will be converted to Redux
 #### .) Private Routing
-#### .) Vendor Admin Dashbaord
 #### .) Owner Admin Dashbaord
 #### .) Login with Social through Firebase Authentication 
