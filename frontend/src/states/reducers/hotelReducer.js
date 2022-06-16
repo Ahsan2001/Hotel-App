@@ -1,9 +1,9 @@
-import ActionTypes from "../constants";
+import ActionTypes from "../constant";
 
 const INITIAL_STATE = {
-    userData: {},
-    userDataLoading: false,
-    userDataError: "",
+    productObj: {},
+    Loading: false,
+    Error: "",
 };
 
 const hotelReducer = (state = INITIAL_STATE, action) => {
@@ -11,23 +11,23 @@ const hotelReducer = (state = INITIAL_STATE, action) => {
         case ActionTypes.GET_HOTEL_REQUEST:
             return {
                 ...state,
-                userDataLoading: true,
+                Loading: true,
             };
 
         case ActionTypes.GET_HOTEL_SUCCESS:
             return {
                 ...state,
-                userData: action.payload,
-                userDataLoading: false,
-                userDataError: "",
+                productObj: action.payload,
+                Loading: false,
+                Error: "",
             };
 
         case ActionTypes.GET_HOTEL_FAIL:
             return {
                 ...state,
-                userDataLoading: false,
-                userDataError: action.payload,
-                userData: {},
+                Loading: false,
+                Error: action.payload,
+                productObj: {},
             };
 
         default:
