@@ -20,6 +20,8 @@
 #### .) Dynamic Content from APi 
 #### .) Search Functionality Done
 #### .) 404 Page Done, Loader Done
+#### .) Create User/Vendor Account Done & Login Account Funcationality Done 
+#### .) Save Registration Data in MongoDB both Vendor/User 
 #### .) GEt data through Context Api  
 #### .) Get Images From Cloudnairy Db Done 
 #### .) Material UI dONE 
